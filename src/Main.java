@@ -6,6 +6,6 @@ public class Main {
 
         System.out.println("Name1 == " + name1);
         System.out.println("Name2 == " + name2);
-        System.out.println("Name1 == Name 2" + name1==name2);
+        System.out.println("Name1 == Name 2 " + name1.equals(name2));
     }
 }
