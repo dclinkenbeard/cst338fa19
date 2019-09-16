@@ -1,11 +1,20 @@
 
 public class Main {
     public static void main(String[] args) {
-        String name1 = "Carol Danvers";
-        String name2 = name1;
+        new Toy().toString();
+        Toy t = new Toy();
+        Toy u = t.makeCopy().set("Bob", 2);
+        System.out.println( u.toString());
+        Toy s = t;
+        System.out.println( "s.equals(t) == " + s.equals(t) );
+        Toy v = t.makeCopy();
+        System.out.println( "v.equals(t) == " + v.equals(t) );
+        s.set("Buzz",3);
+        System.out.println( "s == " + s.toString());
+        System.out.println( "t == " + t.toString());
+        v = t.makeCopy();
+        System.out.println( "v.equals(t) == " + v.equals(t) );
+        System.out.println( t.toString());
 
-        System.out.println("Name1 == " + name1);
-        System.out.println("Name2 == " + name2);
-        System.out.println("Name1 == Name 2 " + name1.equals(name2));
     }
 }
